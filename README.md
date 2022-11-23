@@ -77,30 +77,26 @@
 
 <!-- コンテナの作成方法、パッケージのインストール方法など、開発環境構築に必要な情報を記載 -->
 
-1. .env ファイルの配置
-
-   <ユーザ名>から.env ファイルをもらい、.env ファイルをルートディレクトリ直下に配置
-
-2. プロジェクトの作成
+1. プロジェクトの作成
 
 ```
-docker-compose run
+docker-compose run --rm front sh -c "npx create-react-app app"
 ```
 
-3. コンテナの起動
+2. コンテナの起動
 
 ```
 docker-compose up -d
 ```
 
-4. コンテナの停止
+3. コンテナの停止
 
 ```
 docker-compose down
 ```
 
-5. 動作確認
-   http:localhost:80 にアクセスできるか確認
+4. 動作確認
+   http:localhost:3000 にアクセスできるか確認
    アクセスできたら成功
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
